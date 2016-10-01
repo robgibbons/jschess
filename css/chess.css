@@ -1,0 +1,47 @@
+html, body {
+    padding-top: 20px;
+}
+* {
+    font-size: 78px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+div#board {
+    overflow: hidden;
+    border: 5px solid black;
+    border-top: 5px solid #555;
+    border-left: 5px solid #555;
+    padding: 0;
+    margin: auto;
+    width: 768px;
+    box-shadow: 7px 7px 14px #999;
+}
+div#board > div {
+    margin: 0;
+    padding: 0;
+    float: left;
+    width: 96px;
+    height: 96px;
+    line-height: 96px;
+    background: #fff;
+    overflow: hidden;
+    text-align: center;
+    cursor: default;
+}
+div#board div:nth-child(-2n+8),
+div#board div:nth-child(8) ~ div:nth-child(-2n+15),
+div#board div:nth-child(16) ~ div:nth-child(-2n+24),
+div#board div:nth-child(24) ~ div:nth-child(-2n+31),
+div#board div:nth-child(32) ~ div:nth-child(-2n+40),
+div#board div:nth-child(40) ~ div:nth-child(-2n+47),
+div#board div:nth-child(48) ~ div:nth-child(-2n+56),
+div#board div:nth-child(56) ~ div:nth-child(-2n+63) {
+    background: #ddd;
+}
+div#board > div:not(:empty) {
+    cursor: pointer;
+}
